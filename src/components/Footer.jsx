@@ -6,6 +6,7 @@ import { SiGmail } from "react-icons/si";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const FooterContainer = styled.footer`
+  overflow-x: hidden;
   background-color: #000000;
   color: #fff;
   padding: 20px;

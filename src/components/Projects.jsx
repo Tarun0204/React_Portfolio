@@ -4,12 +4,14 @@ import { FaGithub, FaEye } from "react-icons/fa";
 import projectsData from "../projectsData";
 
 const projectsTabsList = [
+  { tabId: "All", displayText: "ALL" },
   { tabId: "React", displayText: "React JS" },
   { tabId: "Php", displayText: "PHP & MySQL" },
   { tabId: "Basics", displayText: "Basic Web Development" },
 ];
 
 const ProjectsApp = styled.div`
+  overflow-x: hidden;
   padding: 20px;
 `;
 
@@ -121,7 +123,6 @@ const TechnologiesUsed = styled.div`
 `;
 
 const TechnologyItem = styled.span`
-  /* background-color: #001f3d;  */
   background-color: #f3f3f3;
   color: #000000;
   font-size: 14px;
@@ -156,11 +157,12 @@ const Button = styled.a`
 `;
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState("React");
+  const [activeTab, setActiveTab] = useState("All");
 
-  const filteredProjects = projectsData.filter(
-    (project) => project.category === activeTab
-  );
+  const filteredProjects =
+    activeTab === "All"
+      ? projectsData
+      : projectsData.filter((project) => project.category === activeTab);
 
   return (
     <ProjectsApp>

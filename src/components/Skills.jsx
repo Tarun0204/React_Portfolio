@@ -12,6 +12,7 @@ const scroll = keyframes`
 `;
 
 const SkillsContainer = styled.div`
+  overflow-x: hidden;
   text-align: center;
   padding: 20px;
   position: relative;

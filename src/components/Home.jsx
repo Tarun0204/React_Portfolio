@@ -2,18 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import Typewriter from "typewriter-effect";
 import About from "./About";
 import Skills from "./Skills";
 import Contact from "./Contact";
-import Movies from "../assets/Projects/Movies.jpg";
-
-const jobRoles = [
-  "FRONTEND DEVELOPMENT WITH REACT",
-  "BACKEND DEVELOPMENT",
-  "PROGRAMMING WITH PYTHON",
-];
+import Tarun_Kumar from "../assets/Tarun_Kumar.jpg";
+import { Home as HomeData } from "../MyData";
 
 const HomeContainer = styled.div`
+  overflow-x: hidden;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -169,16 +166,19 @@ const Home = () => {
         <ContentContainer>
           <Content>
             <HiText>Hey Everyone!</HiText>
-            <NameText>I'M TARUN KUMAR POTTI</NameText>
-            <JobRole>FRONTEND DEVELOPER</JobRole>
-            <ParaText>
-              I am a recent graduate with a strong focus on frontend development
-              using React and a solid understanding of Python as a programming
-              language. I have built dynamic web applications and developed a
-              passion for coding. Currently, I am expanding my knowledge by
-              learning backend development. I’m eager to grow as a developer and
-              build full-stack applications.
-            </ParaText>
+            <NameText>
+              I'M <span>{HomeData.name}</span>
+            </NameText>
+            <JobRole>
+              <Typewriter
+                options={{
+                  strings: HomeData.roles,
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </JobRole>
+            <ParaText>{HomeData.myDescription}</ParaText>
             <ButtonsContainer>
               <Link to="/projects">
                 <ProjectsBtn type="button">Projects</ProjectsBtn>
@@ -189,7 +189,7 @@ const Home = () => {
             </ButtonsContainer>
           </Content>
           <ImageContainer>
-            <ProfileImg src={Movies} alt="Profile" />
+            <ProfileImg src={Tarun_Kumar} alt="Profile" />
           </ImageContainer>
         </ContentContainer>
       </HomeContainer>

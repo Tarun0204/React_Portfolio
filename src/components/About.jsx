@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { About as AboutData } from "../MyData";
+import { Education as StudyData } from "../MyData";
 
 const AboutApp = styled.div`
+  overflow-x: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -27,7 +30,7 @@ const Title = styled.h1`
 `;
 
 const RightContainer = styled.div`
-  height: 45vh;
+  height: auto;
   flex: 1;
   margin-left: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -142,7 +145,14 @@ const Edu = styled.h3`
   font-size: 16px;
 `;
 
+const EduPara = styled.p`
+  font-size: 15px;
+  font-style: italic;
+`
+
 const About = () => {
+  const { aboutDescription } = AboutData;
+
   return (
     <AboutApp id="aboutSection">
       <Title>About Me</Title>
@@ -156,17 +166,7 @@ const About = () => {
             </BorderHeader>
             <TextContentInner>
               <Greeting>Hello! :)</Greeting>
-              <ContentText>
-                An aspiring web developer with a passion for creating innovative
-                and functional websites. I love diving into both the creative
-                and technical aspects of web development, from designing
-                intuitive user interfaces to building efficient back-end
-                systems. My goal is to continually learn and grow in the field,
-                while bringing fresh ideas and practical solutions to the
-                projects I work on. Whether it's mastering new technologies or
-                optimizing existing code, I thrive on challenges and am always
-                excited to explore new opportunities.
-              </ContentText>
+              <ContentText>{aboutDescription}</ContentText>
               <div className="buttons-container">
                 <button type="button">Download CV</button>
                 <button type="button">Projects</button>
@@ -179,14 +179,12 @@ const About = () => {
       <RightContainer>
         <RightHeading>My Education</RightHeading>
         <EducationContent>
-          <EduContainer>
-            <Edu>BTech in Computer Science</Edu>
-            <p>2020 - 2024</p>
-          </EduContainer>
-          <EduContainer>
-            <Edu>BTech in Computer Science</Edu>
-            <p>2020 - 2024</p>
-          </EduContainer>
+          {StudyData.map(({ id, collegeName, Stream, duration }) => (
+            <EduContainer key={id}>
+              <Edu>{collegeName}</Edu>
+              <EduPara>{Stream}, {duration}</EduPara>
+            </EduContainer>
+          ))}
         </EducationContent>
       </RightContainer>
     </AboutApp>
