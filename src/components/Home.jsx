@@ -202,6 +202,9 @@ const Home = () => {
         </ContentContainer>
       </HomeContainer>
       <>
+        <>
+        <About />
+        </>
         <Skills />
         <Contact />
       </>
