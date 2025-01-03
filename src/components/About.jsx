@@ -179,7 +179,7 @@ const DownloadBtn = styled.a`
 
 const About = () => {
   useEffect(() => {
-    Aos.init();
+    Aos.init({ once: true });
   }, []);
 
   const { aboutDescription, resumeLink } = AboutData;
