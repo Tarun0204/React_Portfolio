@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { FaGraduationCap } from "react-icons/fa6";
+import { FaFileDownload } from "react-icons/fa";
 import { About as AboutData } from "../MyData";
 import { Education as StudyData } from "../MyData";
 
@@ -148,15 +152,42 @@ const Edu = styled.h3`
 const EduPara = styled.p`
   font-size: 15px;
   font-style: italic;
-`
+`;
+
+const DownloadBtn = styled.a`
+  text-decoration: none;
+  cursor: pointer;
+  background: linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+`;
 
 const About = () => {
-  const { aboutDescription } = AboutData;
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
+  const { aboutDescription, resumeLink } = AboutData;
 
   return (
     <AboutApp id="aboutSection">
       <Title>About Me</Title>
-      <LeftContainer>
+      <LeftContainer data-aos="fade-right">
         <TextContent>
           <Border>
             <BorderHeader>
@@ -168,21 +199,26 @@ const About = () => {
               <Greeting>Hello! :)</Greeting>
               <ContentText>{aboutDescription}</ContentText>
               <div className="buttons-container">
-                <button type="button">Download CV</button>
-                <button type="button">Projects</button>
+                <DownloadBtn type="button" href={resumeLink}>
+                  Download CV <FaFileDownload />
+                </DownloadBtn>
               </div>
             </TextContentInner>
           </Border>
         </TextContent>
       </LeftContainer>
 
-      <RightContainer>
-        <RightHeading>My Education</RightHeading>
-        <EducationContent>
+      <RightContainer data-aos="fade-left">
+        <RightHeading>
+          <FaGraduationCap /> My Education
+        </RightHeading>
+        <EducationContent data-aos="fade-up">
           {StudyData.map(({ id, collegeName, Stream, duration }) => (
             <EduContainer key={id}>
               <Edu>{collegeName}</Edu>
-              <EduPara>{Stream}, {duration}</EduPara>
+              <EduPara>
+                {Stream}, {duration}
+              </EduPara>
             </EduContainer>
           ))}
         </EducationContent>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
@@ -8,6 +8,8 @@ import Skills from "./Skills";
 import Contact from "./Contact";
 import Tarun_Kumar from "../assets/Tarun_Kumar.jpg";
 import { Home as HomeData } from "../MyData";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const HomeContainer = styled.div`
   overflow-x: hidden;
@@ -64,7 +66,9 @@ const NameText = styled.h1`
   }
 `;
 
-const JobRole = styled.p`
+const JobRole = styled.div`
+  margin-top: 8px;
+  margin-bottom: 8px;
   display: inline-block;
   background: linear-gradient(
     225deg,
@@ -160,11 +164,15 @@ const ContactInfoBtn = styled.button`
 `;
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <>
-      <HomeContainer>
+      <HomeContainer id="homeSection">
         <ContentContainer>
-          <Content>
+          <Content data-aos="fade-up">
             <HiText>Hey Everyone!</HiText>
             <NameText>
               I'M <span>{HomeData.name}</span>
@@ -188,7 +196,7 @@ const Home = () => {
               </HashLink>
             </ButtonsContainer>
           </Content>
-          <ImageContainer>
+          <ImageContainer data-aos="fade-down">
             <ProfileImg src={Tarun_Kumar} alt="Profile" />
           </ImageContainer>
         </ContentContainer>

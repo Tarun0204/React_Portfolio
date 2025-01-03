@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 import {
   FaLinkedin,
@@ -8,6 +9,10 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { Home as HomeData } from "../MyData";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ContactSectionContainer = styled.div`
   overflow-x: hidden;
@@ -44,7 +49,7 @@ const ContactHeading = styled.h1`
 
 const LeftContainer = styled.div`
   flex: 1;
-  min-width: 320px;
+  min-width: 300px;
   padding: 30px;
   border-radius: 12px;
   color: #ffffff;
@@ -100,7 +105,7 @@ const IconLink = styled.a`
 
 const RightContainer = styled.div`
   flex: 1;
-  min-width: 320px;
+  min-width: 300px;
   padding: 30px;
   border-radius: 12px;
   color: #ffffff;
@@ -173,9 +178,10 @@ const MsgButton = styled.button`
     hsla(271, 100%, 50%, 1) 0%,
     hsla(294, 100%, 50%, 1) 100%
   );
+  border: none;
   border-radius: 10px;
   padding: 12px 24px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   color: white;
   text-align: center;
@@ -188,14 +194,75 @@ const MsgButton = styled.button`
 `;
 
 const Contact = () => {
-  const { gmail, githubLink, linkedInLink } = HomeData;
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
+  const { phoneNo, gmail, githubLink, linkedInLink } = HomeData;
+  const form = useRef();
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (!validateEmail(formData.user_email)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
+    setLoading(true);
+
+    emailjs
+      .sendForm("service_h9gtv6f", "template_hdki21j", form.current, {
+        publicKey: "kIP0Z0pMM5B8c90GE",
+      })
+      .then(
+        () => {
+          setFormData({ user_name: "", user_email: "", message: "" });
+          msgSent();
+          setLoading(false);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          setLoading(false);
+        }
+      );
+  };
+
+  const msgSent = () => {
+    toast.success("Message Sent Successfully!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
 
   return (
     <ContactSectionContainer id="contactSection">
       <ContactContent>
         <ContactHeading>Contact Me</ContactHeading>
       </ContactContent>
-      <LeftContainer>
+      <LeftContainer data-aos="fade-right">
         <TouchHeading>Get In Touch</TouchHeading>
         <TouchPara>
           Feel free to reach out to me for any questions or opportunities!
@@ -203,7 +270,7 @@ const Contact = () => {
         <IconsContent>
           <IconsContentContainer>
             <FaPhoneAlt />{" "}
-            <IconLink href="tel:+919849267182">+91 9849267182</IconLink>
+            <IconLink href={`tel:${phoneNo}`}>{phoneNo}</IconLink>
           </IconsContentContainer>
           <IconsContentContainer>
             <FaEnvelope /> <IconLink href={`mailto:${gmail}`}>{gmail}</IconLink>
@@ -230,16 +297,38 @@ const Contact = () => {
           </IconsContentContainer>
         </IconsContent>
       </LeftContainer>
-      <RightContainer>
-        <form>
-          <NameInput type="text" placeholder="Enter your Name" />
-          <NameInput type="email" placeholder="Enter your Email" />
-          <TextareaInput placeholder="Enter your Message"></TextareaInput>
-          <MsgButton>
-            Send Message <FaTelegramPlane />
+
+      <RightContainer data-aos="fade-left">
+        <form ref={form} onSubmit={sendEmail}>
+          <NameInput
+            type="text"
+            placeholder="Enter your Name"
+            name="user_name"
+            value={formData.user_name}
+            onChange={handleChange}
+            required
+          />
+          <NameInput
+            type="email"
+            placeholder="Enter your Email"
+            name="user_email"
+            value={formData.user_email}
+            onChange={handleChange}
+            required
+          />
+          <TextareaInput
+            placeholder="Enter your Message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+          <MsgButton type="submit" value="Send" disabled={loading}>
+            {loading ? "Sending..." : "Send Message"} <FaTelegramPlane />
           </MsgButton>
         </form>
       </RightContainer>
+      <ToastContainer />
     </ContactSectionContainer>
   );
 };

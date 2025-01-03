@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { SiGmail } from "react-icons/si";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const FooterContainer = styled.footer`
   overflow-x: hidden;
@@ -74,9 +76,13 @@ const FooterBottom = styled.div`
 `;
 
 const Footer = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <FooterContainer>
-      <FooterIcons>
+      <FooterIcons data-aos="fade-up">
         <FooterIconLink
           href="https://www.linkedin.com/in/tarun-kumar-potti-440a74268/"
           target="_blank"

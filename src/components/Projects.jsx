@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaGithub, FaEye } from "react-icons/fa";
 import projectsData from "../projectsData";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const projectsTabsList = [
   { tabId: "All", displayText: "ALL" },
@@ -11,6 +13,7 @@ const projectsTabsList = [
 ];
 
 const ProjectsApp = styled.div`
+  background-color: #090917;
   overflow-x: hidden;
   padding: 20px;
 `;
@@ -20,14 +23,20 @@ const ProjectsHeaderContent = styled.div`
   flex-direction: column;
 `;
 
-const ProjectsMainHeading = styled.h2`
-  color: #000000;
+const ProjectsMainHeading = styled.h1`
+  background-image: linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
   text-align: center;
   margin: 0;
 `;
 
 const ProjectsPara = styled.p`
-  color: #000000;
+  color: darkgray;
   text-align: center;
 `;
 
@@ -50,17 +59,17 @@ const TabButton = styled.button`
   font-size: 16px;
   padding: 10px;
   cursor: pointer;
-  color: #000000;
+  color: #ffffff;
   border-bottom: 2px solid transparent;
   transition: border-color 0.3s;
 
   &.active {
-    border-color: #db1c48;
+    border-color: #854ce6;
     font-weight: bold;
   }
 
   &:hover {
-    border-color: #db1c48;
+    border-color: #854ce6;
   }
 
   @media (max-width: 768px) {
@@ -73,6 +82,8 @@ const Dropdown = styled.select`
   width: 100%;
   padding: 10px;
   font-size: 16px;
+  background-color: #1c1e27;
+  color: #ffffff;
 
   @media (max-width: 768px) {
     display: block;
@@ -87,7 +98,7 @@ const ProjectsContainer = styled.div`
 `;
 
 const ProjectItemData = styled.div`
-  background-color: #ffffff;
+  background-color: #1c1e27;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 20px;
@@ -96,6 +107,11 @@ const ProjectItemData = styled.div`
   max-width: 300px;
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    margin-right: 20px;
+    width: 86%;
+  }
 `;
 
 const ProjectImage = styled.img`
@@ -105,12 +121,12 @@ const ProjectImage = styled.img`
 `;
 
 const ProjectHeading = styled.h3`
-  color: #000000;
+  color: #ffffff;
   margin: 10px 0 5px;
 `;
 
 const ProjectDescription = styled.p`
-  color: #555555;
+  color: #b1b2b3;
   margin: 5px 0 10px;
 `;
 
@@ -123,11 +139,11 @@ const TechnologiesUsed = styled.div`
 `;
 
 const TechnologyItem = styled.span`
-  background-color: #f3f3f3;
-  color: #000000;
+  background-color: #090917;
+  color: #ffffff;
   font-size: 14px;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 6px 12px;
+  border-radius: 50px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 `;
 
@@ -138,10 +154,36 @@ const ButtonsContainer = styled.div`
   margin-top: 20px;
 `;
 
-const Button = styled.a`
+const SourceBtn = styled.a`
   text-decoration: none;
   cursor: pointer;
-  background-color: #db1c48;
+  background-color: transparent;
+  color: #854ce6;
+  border: 2px solid hsla(271, 100%, 50%, 1);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background: linear-gradient(
+      225deg,
+      hsla(271, 100%, 50%, 1) 0%,
+      hsla(294, 100%, 50%, 1) 100%
+    );
+    border: none;
+    color: #ffffff;
+  }
+`;
+
+const LiveBtn = styled.a`
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #854ce6;
+  border: none;
   color: #ffffff;
   padding: 10px 15px;
   border-radius: 5px;
@@ -152,11 +194,15 @@ const Button = styled.a`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #a51536;
+    background-color: #854ce3;
   }
 `;
 
 const Projects = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   const [activeTab, setActiveTab] = useState("All");
 
   const filteredProjects =
@@ -171,7 +217,7 @@ const Projects = () => {
         <ProjectsPara>Explore my Projects</ProjectsPara>
       </ProjectsHeaderContent>
 
-      <ProjectsTabContainer>
+      <ProjectsTabContainer data-aos="fade-down">
         {projectsTabsList.map((tab) => (
           <TabButton
             key={tab.tabId}
@@ -193,7 +239,7 @@ const Projects = () => {
         </Dropdown>
       </ProjectsTabContainer>
 
-      <ProjectsContainer>
+      <ProjectsContainer data-aos="zoom-in">
         {filteredProjects.map((eachProject) => (
           <ProjectItemData key={eachProject.id}>
             <ProjectImage
@@ -210,22 +256,22 @@ const Projects = () => {
               ))}
             </TechnologiesUsed>
             <ButtonsContainer>
-              <Button
+              <SourceBtn
                 href={eachProject.sourceCode}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Source Code
                 <FaGithub />
-              </Button>
-              <Button
+              </SourceBtn>
+              <LiveBtn
                 href={eachProject.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Live Demo
                 <FaEye />
-              </Button>
+              </LiveBtn>
             </ButtonsContainer>
           </ProjectItemData>
         ))}
