@@ -9,7 +9,7 @@ import { Education as StudyData } from "../MyData";
 
 const AboutApp = styled.div`
   overflow-x: hidden;
-  overflow-y: hidden; /* Prevent vertical scrolling for the entire component */
+  overflow-y: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -52,9 +52,9 @@ const RightContainer = styled.div`
 const LeftContainer = styled.div`
   flex: 1;
   max-width: 48%;
-  max-height: 100%; /* Prevent overflow */
-  overflow-y: auto; /* Allow vertical scrolling only if content exceeds container */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  max-height: 100%; 
+  overflow-y: auto;
+  overflow-x: hidden; 
 
   @media (max-width: 768px) {
     max-width: 100%;
@@ -63,7 +63,7 @@ const LeftContainer = styled.div`
 
 const TextContent = styled.div`
   width: 100%;
-  overflow: hidden; /* Ensure no overflow from internal content */
+  overflow: hidden;
 `;
 
 const RoundedBox = styled.div`
@@ -116,7 +116,7 @@ const TextContentInner = styled.div`
   text-align: justify;
   font-size: 1.32rem;
   line-height: 2;
-  overflow-y: auto; /* Ensure content scrolls only if necessary */
+  overflow-y: auto;
 `;
 
 const Greeting = styled.span`
@@ -185,7 +185,7 @@ const DownloadBtn = styled.a`
 
 const About = () => {
   useEffect(() => {
-    Aos.init({ once: true });
+    Aos.init();
   }, []);
 
   const { aboutDescription, resumeLink } = AboutData;
