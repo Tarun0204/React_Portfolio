@@ -191,7 +191,7 @@ const About = () => {
   const { aboutDescription, resumeLink } = AboutData;
 
   return (
-    <AboutApp>
+    <AboutApp id="aboutSection">
       <Title>About Me</Title>
       <LeftContainer data-aos="fade-right">
         <TextContent>
