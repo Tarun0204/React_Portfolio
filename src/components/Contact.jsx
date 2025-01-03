@@ -53,11 +53,7 @@ const LeftContainer = styled.div`
   padding: 30px;
   border-radius: 12px;
   color: #ffffff;
-  background: linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
+  background-color: #1c1e27;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 768px) {
@@ -76,7 +72,7 @@ const TouchHeading = styled.h2`
 const TouchPara = styled.p`
   font-size: 1.1rem;
   margin-bottom: 20px;
-  color: #000000;
+  color: darkgray;
   line-height: 1.6;
 `;
 
@@ -103,7 +99,7 @@ const IconLink = styled.a`
   font-weight: 200;
 
   &:hover {
-    color: #000000;
+    color: #854ce6;
   }
 `;
 
