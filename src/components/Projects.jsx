@@ -238,7 +238,7 @@ const Projects = () => {
         </Dropdown>
       </ProjectsTabContainer>
 
-      <ProjectsContainer data-aos="zoom-in">
+      <ProjectsContainer data-aos="flip-right">
         {filteredProjects.map((eachProject) => (
           <ProjectItemData key={eachProject.id}>
             <ProjectImage
