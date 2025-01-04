@@ -240,7 +240,7 @@ const Projects = () => {
 
       <ProjectsContainer>
         {filteredProjects.map((eachProject) => (
-          <ProjectItemData key={eachProject.id} data-aos="flip-right">
+          <ProjectItemData key={eachProject.id} data-aos="flip-right" data-aos-delay={`${index * 100}`}>
             <ProjectImage
               src={eachProject.imageUrl}
               alt={eachProject.projectName}
