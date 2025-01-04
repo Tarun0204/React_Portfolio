@@ -99,7 +99,6 @@ const ProjectsContainer = styled.div`
 
 const ProjectItemData = styled.div`
   background-color: #1c1e27;
-  border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
@@ -200,7 +199,7 @@ const LiveBtn = styled.a`
 
 const Projects = () => {
   useEffect(() => {
-    Aos.init({ duration: 1200, once: true });
+    Aos.init();
   }, []);
 
   const [activeTab, setActiveTab] = useState("All");
@@ -241,7 +240,7 @@ const Projects = () => {
 
       <ProjectsContainer>
         {filteredProjects.map((eachProject) => (
-          <ProjectItemData key={eachProject.id} data-aos="flip-right">
+          <ProjectItemData key={eachProject.id}>
             <ProjectImage
               src={eachProject.imageUrl}
               alt={eachProject.projectName}
