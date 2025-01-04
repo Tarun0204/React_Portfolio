@@ -198,9 +198,10 @@ const LiveBtn = styled.a`
 `;
 
 const Projects = () => {
-  useEffect(() => {
-    Aos.init();
-  }, []);
+ useEffect(() => {
+  Aos.init();
+  Aos.refresh();
+}, [activeTab]);
 
   const [activeTab, setActiveTab] = useState("All");
 
