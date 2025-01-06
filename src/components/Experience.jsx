@@ -39,7 +39,6 @@ const Experience = () => {
             <h4 className="vertical-timeline-element-subtitle">
               {item.companyName}
             </h4>
-            <p className="details">{`Duration: ${item.duration}`}</p>
             <p className="details">{`Projects: ${item.projectName.join(
               ", "
             )}`}</p>
