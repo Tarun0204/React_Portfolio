@@ -113,7 +113,7 @@ const ProfileImg = styled.img`
   height: auto;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 2px solid hsla(271, 100%, 50%, 1);
+  border: 2px solid #ffffff;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 
   @media (max-width: 640px) {
