@@ -75,6 +75,16 @@ const FooterBottom = styled.div`
   font-size: 16px;
 `;
 
+const Span = styled.span`
+  background-image: linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+`
+
 const Footer = () => {
   useEffect(() => {
     Aos.init();
@@ -107,11 +117,13 @@ const Footer = () => {
             About
           </StyledHashLink>
         </FooterLink>
-        <FooterLink>Experience</FooterLink>
         <FooterLink>
           <StyledHashLink smooth to="/#skillsSection">
             Skills
           </StyledHashLink>
+        </FooterLink>
+        <FooterLink>
+          <StyledLink to="/experience">Experience</StyledLink>
         </FooterLink>
         <FooterLink>
           <StyledLink to="/projects">Projects</StyledLink>
@@ -123,7 +135,7 @@ const Footer = () => {
         </FooterLink>
       </FooterLinks>
       <FooterBottom>
-        <p>© Portfolio developed by Tarun Kumar Potti</p>
+        <p>© Portfolio developed by <Span>Tarun Kumar Potti</Span></p>
       </FooterBottom>
     </FooterContainer>
   );

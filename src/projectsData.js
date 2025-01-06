@@ -7,64 +7,12 @@ import Todos from "./assets/Projects/Todos.jpg";
 import Trendz from "./assets/Projects/Trendz.jpg";
 import UNI from "./assets/Projects/UNI.jpg";
 import Video_Streaming from "./assets/Projects/Video_Streaming.jpg";
-import Wikki from "./assets/Projects/Wikki.jpg"
-import HMS from "./assets/Projects/HMS.jpg"
+import Wikki from "./assets/Projects/Wikki.jpg";
+import HMS from "./assets/Projects/HMS.jpg";
 
 const projectsData = [
   {
     id: 1,
-    imageUrl: Apps,
-    projectName: "App Store",
-    projectDescription: "",
-    technologies: ["React JS", "JavaScript", "CSS"],
-    liveLink: "https://tarun0204.github.io/React_AppStore/",
-    sourceCode: "https://github.com/Tarun0204/React_AppStore",
-    category: "Basics",
-  },
-  /*
-  {
-    id: 2,
-    imageUrl: PG_Life,
-    projectName: "PG Life",
-    projectDescription: "",
-    technologies: ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP", "MySQL"],
-    liveLink:
-      "https://drive.google.com/file/d/1MI32IoF6KRgUbDAR39Q7dIXRY6Pp34Bx/view",
-    sourceCode: "https://github.com/Tarun0204/PG_Admin",
-    category: "Php",
-  }, */
-  {
-    id: 3,
-    imageUrl: Tech,
-    projectName: "Technologies App",
-    projectDescription: "",
-    technologies: ["React JS", "JavaScript", "CSS", "Mock API"],
-    liveLink: "https://technologies-app.vercel.app/",
-    sourceCode: "https://github.com/Tarun0204/Tech",
-    category: "Basics",
-  },
-  {
-    id: 4,
-    imageUrl: Sams_Griddle,
-    projectName: "Sams Griddle",
-    projectDescription: "",
-    technologies: ["HTML", "CSS", "Bootstrap", "JavaScript"],
-    liveLink: "https://restro-page.vercel.app",
-    sourceCode: "https://github.com/Tarun0204/Restro_Page",
-    category: "Basics",
-  },
-  {
-    id: 5,
-    imageUrl: Todos,
-    projectName: "Todo List",
-    projectDescription: "",
-    technologies: ["HTML", "CSS", "Bootstrap", "JavaScript"],
-    liveLink: "https://tarun0204.github.io/ToDo-List/",
-    sourceCode: "https://github.com/Tarun0204/ToDo-List",
-    category: "Basics",
-  },
-  {
-    id: 6,
     imageUrl: Video_Streaming,
     projectName: "Video Streaming Application",
     projectDescription: "",
@@ -79,7 +27,7 @@ const projectsData = [
     category: "React",
   },
   {
-    id: 7,
+    id: 2,
     imageUrl: Trendz,
     projectName: "Trendz - Ecommerce App",
     projectDescription: "",
@@ -95,17 +43,17 @@ const projectsData = [
     category: "React",
   },
   {
-    id: 8,
+    id: 3,
     imageUrl: Movies,
     projectName: "Movie Database",
     projectDescription: "",
-    technologies: ["React JS", "JavaScript", "CSS", "TMDB API"],
+    technologies: ["React JS", "JavaScript", "CSS Flexbox", "TMDB API"],
     liveLink: "https://moviedatabase-app.vercel.app",
     sourceCode: "https://github.com/Tarun0204/movies",
     category: "React",
   },
   {
-    id: 9,
+    id: 4,
     imageUrl: UNI,
     projectName: "UNI Resto Cafe",
     projectDescription: "",
@@ -121,6 +69,67 @@ const projectsData = [
     category: "React",
   },
   {
+    id: 5,
+    imageUrl: HMS,
+    projectName: "Hospital Management System - Care Hospital",
+    projectDescription: "",
+    technologies: ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP", "MySQL"],
+    sourceCode: "https://github.com/Tarun0204/Care",
+    category: "Php",
+  },
+  /*
+  {
+    id: 6,
+    imageUrl: PG_Life,
+    projectName: "PG Life",
+    projectDescription: "",
+    technologies: ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP", "MySQL"],
+    liveLink:
+      "https://drive.google.com/file/d/1MI32IoF6KRgUbDAR39Q7dIXRY6Pp34Bx/view",
+    sourceCode: "https://github.com/Tarun0204/PG_Admin",
+    category: "Php",
+  }, */
+  {
+    id: 6,
+    imageUrl: Apps,
+    projectName: "App Store",
+    projectDescription: "",
+    technologies: ["React JS", "JavaScript", "CSS Flexbox"],
+    liveLink: "https://tarun0204.github.io/React_AppStore/",
+    sourceCode: "https://github.com/Tarun0204/React_AppStore",
+    category: "Basics",
+  },
+  {
+    id: 7,
+    imageUrl: Tech,
+    projectName: "Technologies App",
+    projectDescription: "",
+    technologies: ["React JS", "JavaScript", "CSS Flexbox", "Mock API"],
+    liveLink: "https://technologies-app.vercel.app/",
+    sourceCode: "https://github.com/Tarun0204/Tech",
+    category: "Basics",
+  },
+  {
+    id: 8,
+    imageUrl: Sams_Griddle,
+    projectName: "Sams Griddle",
+    projectDescription: "",
+    technologies: ["HTML", "CSS Flexbox", "Bootstrap", "JavaScript"],
+    liveLink: "https://restro-page.vercel.app",
+    sourceCode: "https://github.com/Tarun0204/Restro_Page",
+    category: "Basics",
+  },
+  {
+    id: 9,
+    imageUrl: Todos,
+    projectName: "Todo List",
+    projectDescription: "",
+    technologies: ["HTML", "CSS", "Bootstrap", "JavaScript"],
+    liveLink: "https://tarun0204.github.io/ToDo-List/",
+    sourceCode: "https://github.com/Tarun0204/ToDo-List",
+    category: "Basics",
+  },
+  {
     id: 10,
     imageUrl: Wikki,
     projectName: "Wikkipedia Application",
@@ -129,15 +138,6 @@ const projectsData = [
     liveLink: "https://tarun0204.github.io/Wikipedia/",
     sourceCode: "https://github.com/Tarun0204/Wikipedia",
     category: "Basics",
-  },
-  {
-    id: 11,
-    imageUrl: HMS,
-    projectName: "Hospital Management System - Care Hospital",
-    projectDescription: "",
-    technologies: ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP", "MySQL"],
-    sourceCode: "https://github.com/Tarun0204/Care",
-    category: "Php",
   },
 ];
 

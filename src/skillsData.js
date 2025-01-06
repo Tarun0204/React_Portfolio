@@ -10,7 +10,7 @@ import Node from "./assets/Skills/Node.png";
 import Php from "./assets/Skills/Php.png";
 import React from "./assets/Skills/React.svg";
 import Rest from "./assets/Skills/Rest.jpeg";
-import VsCode from "./assets/Skills/VsCode.jpg";
+import VsCode from "./assets/Skills/VsCode.png";
 
 const skillsData = [
   {

@@ -41,17 +41,23 @@ export const Experience = [
     companyName: "INSTIPARTY ONLINE PRIVATE LIMITED, Visakhapatnam",
     roleName: "Web Developer",
     duration: "May 2024 - December 2024",
+    projectName: ["Hospital Management System", "Video Streaming Application"],
+    skills: ["HTML", "CSS", "Bootstrap", "React JS", "PHP", "MySQL"]
   },
   {
     id: 2,
     companyName: "Virtual Internship for 2 Months in INTERNSHALA",
     roleName: "Web Developer",
     duration: "July 2023 - August 2023",
+    projectName: ["PG Life"],
+    skills: ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP", "MySQL"]
   },
   {
     id: 3,
     companyName: "Virtual Internship for 1 Month in TXON",
     roleName: "Frontend Developer",
     duration: "March 2023 - April 2023",
+    projectName: ["Restaurant Website", "Portfolio Website"],
+    skills: ["HTML", "CSS", "Bootstrap", "JavaScript"]
   },
 ];

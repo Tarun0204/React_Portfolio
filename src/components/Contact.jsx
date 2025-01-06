@@ -173,6 +173,7 @@ const TextareaInput = styled.textarea`
 
 const MsgButton = styled.button`
   display: inline-block;
+  cursor: pointer;
   background: linear-gradient(
     225deg,
     hsla(271, 100%, 50%, 1) 0%,

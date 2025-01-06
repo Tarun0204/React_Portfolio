@@ -67,7 +67,11 @@ const Navbar = () => {
             Skills
           </HashLink>
         </li>
-        <li>Experience</li>
+        <li>
+          <Link to="/experience" className="link-react">
+            Experience
+          </Link>
+        </li>
         <li>
           <Link to="/projects" className="link-react">
             Projects

@@ -99,7 +99,6 @@ const ProjectsContainer = styled.div`
 
 const ProjectItemData = styled.div`
   background-color: #1c1e27;
-  border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
@@ -131,20 +130,22 @@ const ProjectDescription = styled.p`
 `;
 
 const TechnologiesUsed = styled.div`
+  width: 100%;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 8px;
+  margin-top: 4px;
   justify-content: center;
 `;
 
 const TechnologyItem = styled.span`
-  background-color: #090917;
-  color: #ffffff;
-  font-size: 14px;
-  padding: 6px 12px;
-  border-radius: 50px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: #1a0c2b;
+  color: #854ce6;
+  font-size: 13px;
+  font-weight: 400px;
+  padding: 5px 10px;
+  border-radius: 10px;
 `;
 
 const ButtonsContainer = styled.div`
@@ -239,7 +240,7 @@ const Projects = () => {
         </Dropdown>
       </ProjectsTabContainer>
 
-      <ProjectsContainer data-aos="zoom-in">
+      <ProjectsContainer>
         {filteredProjects.map((eachProject) => (
           <ProjectItemData key={eachProject.id}>
             <ProjectImage

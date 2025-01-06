@@ -9,11 +9,12 @@ import { Education as StudyData } from "../MyData";
 
 const AboutApp = styled.div`
   overflow-x: hidden;
+  overflow-y: hidden;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   background-color: #090917;
   padding: 20px;
+  flex-wrap: wrap;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -33,6 +34,20 @@ const Title = styled.h1`
   width: 100%;
 `;
 
+const LeftContainer = styled.div`
+  flex: 1;
+  max-width: 48%;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-right: 20px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin-right: 0;
+  }
+`;
+
 const RightContainer = styled.div`
   height: auto;
   flex: 1;
@@ -48,17 +63,9 @@ const RightContainer = styled.div`
   }
 `;
 
-const LeftContainer = styled.div`
-  flex: 1;
-  max-width: 48%;
-
-  @media (max-width: 768px) {
-    max-width: 100%;
-  }
-`;
-
 const TextContent = styled.div`
   width: 100%;
+  overflow: hidden;
 `;
 
 const RoundedBox = styled.div`
@@ -111,6 +118,7 @@ const TextContentInner = styled.div`
   text-align: justify;
   font-size: 1.32rem;
   line-height: 2;
+  overflow-y: auto;
 `;
 
 const Greeting = styled.span`

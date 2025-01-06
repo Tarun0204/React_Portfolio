@@ -57,7 +57,7 @@ const HiText = styled.p`
 
 const NameText = styled.h1`
   font-size: 2.5rem;
-  color: #ffffff;
+  color: darkgray;
   margin: 0;
 
   @media (max-width: 768px) {
@@ -163,6 +163,10 @@ const ContactInfoBtn = styled.button`
   }
 `;
 
+const Span = styled.span`
+  color: #ffffff;
+`;
+
 const Home = () => {
   useEffect(() => {
     Aos.init();
@@ -175,7 +179,7 @@ const Home = () => {
           <Content data-aos="fade-up">
             <HiText>Hey Everyone!</HiText>
             <NameText>
-              I'M <span>{HomeData.name}</span>
+              I'M <Span>{HomeData.name}</Span>
             </NameText>
             <JobRole>
               <Typewriter
