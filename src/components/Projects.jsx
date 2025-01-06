@@ -248,9 +248,6 @@ const Projects = () => {
               alt={eachProject.projectName}
             />
             <ProjectHeading>{eachProject.projectName}</ProjectHeading>
-            <ProjectDescription>
-              {eachProject.projectDescription || "No description available."}
-            </ProjectDescription>
             <TechnologiesUsed>
               {eachProject.technologies.map((tech, index) => (
                 <TechnologyItem key={index}>{tech}</TechnologyItem>
@@ -282,3 +279,9 @@ const Projects = () => {
 };
 
 export default Projects;
+
+/*
+ <ProjectDescription>
+              {eachProject.projectDescription || "No description available."}
+            </ProjectDescription>
+*/
