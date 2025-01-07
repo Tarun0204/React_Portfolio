@@ -279,9 +279,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-/*
- <ProjectDescription>
-              {eachProject.projectDescription || "No description available."}
-            </ProjectDescription>
-*/
