@@ -66,7 +66,7 @@ const Experience = () => {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            text-align: left;
+            text-align: justify;
             border-radius: 8px;
             padding: 15px;
             box-shadow: none;
