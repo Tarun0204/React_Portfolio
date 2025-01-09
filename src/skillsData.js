@@ -4,10 +4,10 @@ import Git from "./assets/Skills/Git.png";
 import Github from "./assets/Skills/Github.png";
 import HTML from "./assets/Skills/HTML.png";
 import JavaScript from "./assets/Skills/JavaScript.png";
-import MongoDB from "./assets/Skills/MongoDB.png";
+//import MongoDB from "./assets/Skills/MongoDB.png";
 import MySQL from "./assets/Skills/MySQL.png";
-import Node from "./assets/Skills/Node.png";
-import Php from "./assets/Skills/Php.png";
+//import Node from "./assets/Skills/Node.png";
+//import Php from "./assets/Skills/Php.png";
 import React from "./assets/Skills/React.svg";
 import Rest from "./assets/Skills/Rest.jpeg";
 import VsCode from "./assets/Skills/VsCode.png";
@@ -39,6 +39,7 @@ const skillsData = [
     skillImg: React,
     skillName: "React JS",
   },
+/*
   {
     id: 6,
     skillImg: Node,
@@ -49,6 +50,7 @@ const skillsData = [
     skillImg: MongoDB,
     skillName: "Mongo DB",
   },
+*/
   {
     id: 8,
     skillImg: MySQL,
@@ -59,11 +61,13 @@ const skillsData = [
     skillImg: Rest,
     skillName: "Rest API",
   },
+  /*
   {
     id: 10,
     skillImg: Php,
     skillName: "Php",
   },
+  */
   {
     id: 11,
     skillImg: Git,
