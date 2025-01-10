@@ -89,7 +89,7 @@ const projectsData = [
     category: "Php",
   },
   {
-    id: 6,
+    id: 7,
     imageUrl: Apps,
     projectName: "App Store",
     projectDescription: "",
@@ -99,7 +99,7 @@ const projectsData = [
     category: "Basics",
   },
   {
-    id: 7,
+    id: 8,
     imageUrl: Tech,
     projectName: "Technologies App",
     projectDescription: "",
@@ -109,7 +109,7 @@ const projectsData = [
     category: "Basics",
   },
   {
-    id: 8,
+    id: 9,
     imageUrl: Sams_Griddle,
     projectName: "Sams Griddle",
     projectDescription: "",
@@ -119,7 +119,7 @@ const projectsData = [
     category: "Basics",
   },
   {
-    id: 9,
+    id: 10,
     imageUrl: Todos,
     projectName: "Todo List",
     projectDescription: "",
@@ -129,7 +129,7 @@ const projectsData = [
     category: "Basics",
   },
   {
-    id: 10,
+    id: 11,
     imageUrl: Wikki,
     projectName: "Wikkipedia Application",
     projectDescription: "",
