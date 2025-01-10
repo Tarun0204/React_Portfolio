@@ -1,6 +1,6 @@
 import Apps from "./assets/Projects/Apps.jpg";
 import Movies from "./assets/Projects/Movies.jpg";
-import PG_Life from "./assets/Projects/PG_Life.jpg";
+//import PG_Life from "./assets/Projects/PG_Life.jpg";
 import Sams_Griddle from "./assets/Projects/Sams_Griddle.jpg";
 import Tech from "./assets/Projects/Tech.jpg";
 import Todos from "./assets/Projects/Todos.jpg";
@@ -77,6 +77,7 @@ const projectsData = [
     sourceCode: "https://github.com/Tarun0204/Care",
     category: "Php",
   },
+  /*
   {
     id: 6,
     imageUrl: PG_Life,
@@ -88,6 +89,7 @@ const projectsData = [
     sourceCode: "https://github.com/Tarun0204/PG_Admin",
     category: "Php",
   },
+  */
   {
     id: 6,
     imageUrl: Apps,
