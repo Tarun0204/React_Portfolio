@@ -196,7 +196,7 @@ const Home = () => {
                 <ProjectsBtn type="button">Projects</ProjectsBtn>
               </Link>
               <HashLink smooth to="/#contactSection">
-                <ContactInfoBtn type="button">Contact Info</ContactInfoBtn>
+                <ProjectsBtn type="button">Contact Info</ProjectsBtn>
               </HashLink>
             </ButtonsContainer>
           </Content>
