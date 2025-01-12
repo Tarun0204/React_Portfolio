@@ -76,8 +76,8 @@ const JobRole = styled.div`
     hsla(294, 100%, 50%, 1) 100%
   );
   border-radius: 10px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  padding: 12px 24px;
+  font-size: 1.2rem;
   font-weight: 600;
   color: white;
   text-align: center;
