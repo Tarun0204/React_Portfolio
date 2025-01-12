@@ -95,7 +95,7 @@ const Experience = () => {
 
           @media (min-width: 768px) {
             .timeline-container {
-              width: 90%;
+              width: 80%;
             }
 
             .vertical-timeline-element-title {
