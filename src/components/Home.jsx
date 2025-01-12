@@ -76,8 +76,8 @@ const JobRole = styled.div`
     hsla(294, 100%, 50%, 1) 100%
   );
   border-radius: 10px;
-  padding: 12px 24px;
-  font-size: 1.2rem;
+  padding: 10px 20px;
+  font-size: 1rem;
   font-weight: 600;
   color: white;
   text-align: center;
@@ -130,23 +130,6 @@ const ButtonsContainer = styled.div`
 `;
 
 const ProjectsBtn = styled.button`
-  background-color: transparent;
-  color: #854ce6;
-  font-weight: bold;
-  border: 2px solid hsla(271, 100%, 50%, 1);
-  padding: 10px 25px;
-  border-radius: 50px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-right: 10px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-
-  &:focus {
-    outline: none;
-  }
-`;
-
-const ContactInfoBtn = styled.button`
   background-color: transparent;
   color: #854ce6;
   font-weight: bold;
