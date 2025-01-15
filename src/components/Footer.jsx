@@ -83,6 +83,7 @@ const Span = styled.span`
   );
   -webkit-background-clip: text;
   color: transparent;
+  font-weight: bold;
 `
 
 const Footer = () => {
