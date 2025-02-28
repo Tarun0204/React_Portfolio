@@ -242,7 +242,9 @@ const Projects = () => {
 
       <ProjectsContainer>
         {filteredProjects.map((eachProject) => (
-          <ProjectItemData key={eachProject.id}>
+          <ProjectItemData key={eachProject.id} 
+            data-aos={index % 2 === 0 ? "zoom-out" : "zoom-in"}
+            >
             <ProjectImage
               src={eachProject.imageUrl}
               alt={eachProject.projectName}
