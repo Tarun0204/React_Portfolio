@@ -241,7 +241,7 @@ const Projects = () => {
       </ProjectsTabContainer>
 
       <ProjectsContainer>
-        {filteredProjects.map((eachProject) => (
+        {filteredProjects.map((eachProject, index) => (
           <ProjectItemData key={eachProject.id} 
             data-aos={index % 2 === 0 ? "zoom-out" : "zoom-in"}
             >
