@@ -241,9 +241,9 @@ const Projects = () => {
       </ProjectsTabContainer>
 
       <ProjectsContainer>
-        {filteredProjects.map((eachProject, index) => (
+        {filteredProjects.map((eachProject, aosIndex) => (
           <ProjectItemData key={eachProject.id} 
-            data-aos={index % 2 === 0 ? "zoom-out" : "zoom-in"}
+            data-aos={aosIndex % 2 === 0 ? "zoom-out" : "zoom-in"}
             >
             <ProjectImage
               src={eachProject.imageUrl}
