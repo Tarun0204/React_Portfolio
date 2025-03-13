@@ -10,10 +10,10 @@ import Video_Streaming from "./assets/Projects/Video_Streaming.jpg";
 import Wikki from "./assets/Projects/Wikki.jpg";
 import HMS from "./assets/Projects/HMS.jpg";
 import IPL from "./assets/Projects/IPL.jpeg";
-import Notes from "./assets/Projects/Notes.jpg";
+// import Notes from "./assets/Projects/Notes.jpg";
 
 const projectsData = [
-  {
+  /* {
     id: 1,
     imageUrl: Notes,
     projectName: "Notes App",
@@ -28,7 +28,7 @@ const projectsData = [
     liveLink: "https://notes-app-online.vercel.app",
     sourceCode: "https://github.com/Tarun0204/Notes_App",
     category: "React",  
-  },
+  },*/
   {
     id: 2,
     imageUrl: Video_Streaming,
