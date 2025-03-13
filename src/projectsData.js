@@ -22,6 +22,7 @@ const projectsData = [
       "React JS",
       "Node JS",
       "MongoDB",
+      "JavaScript",
       "CSS Flexbox",
     ],
     liveLink: "https://notes-app-online.vercel.app",
