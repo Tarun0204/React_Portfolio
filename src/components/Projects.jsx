@@ -15,6 +15,7 @@ const projectsTabsList = [
 const ProjectsApp = styled.div`
   background-color: #090917;
   overflow-x: hidden;
+  padding: 20px;
 `;
 
 const ProjectsHeaderContent = styled.div`
