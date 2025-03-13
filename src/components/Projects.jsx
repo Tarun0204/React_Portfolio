@@ -212,7 +212,7 @@ const Projects = () => {
       : projectsData.filter((project) => project.category === activeTab);
 
   return (
-    <ProjectsApp>
+    <ProjectsApp style={{ width: "100%", overflow: "hidden" }}>
       <ProjectsHeaderContent>
         <ProjectsMainHeading>Projects</ProjectsMainHeading>
         <ProjectsPara>Explore my Projects</ProjectsPara>
