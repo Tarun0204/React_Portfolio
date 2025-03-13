@@ -15,7 +15,6 @@ const projectsTabsList = [
 const ProjectsApp = styled.div`
   background-color: #090917;
   overflow-x: hidden;
-  padding: 20px;
 `;
 
 const ProjectsHeaderContent = styled.div`
@@ -212,7 +211,7 @@ const Projects = () => {
       : projectsData.filter((project) => project.category === activeTab);
 
   return (
-    <ProjectsApp style={{ width: "96%", overflow: "hidden" }}>
+    <ProjectsApp style={{ width: "100%", overflow: "hidden" }}>
       <ProjectsHeaderContent>
         <ProjectsMainHeading>Projects</ProjectsMainHeading>
         <ProjectsPara>Explore my Projects</ProjectsPara>
