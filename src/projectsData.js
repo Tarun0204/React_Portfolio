@@ -14,6 +14,21 @@ import IPL from "./assets/Projects/IPL.jpeg";
 const projectsData = [
   {
     id: 1,
+    imageUrl: Notes,
+    projectName: "Notes App",
+    projectDescription: "",
+    technologies: [
+      "React JS",
+      "Node JS",
+      "MongoDB",
+      "CSS Flexbox",
+    ],
+    liveLink: "https://notes-app-online.vercel.app",
+    sourceCode: "https://github.com/Tarun0204/Notes_App",
+    category: "React",  
+  },
+  {
+    id: 2,
     imageUrl: Video_Streaming,
     projectName: "Video Streaming Application",
     projectDescription: "",
@@ -28,7 +43,7 @@ const projectsData = [
     category: "React",
   },
   {
-    id: 2,
+    id: 3,
     imageUrl: Trendz,
     projectName: "Trendz - Ecommerce App",
     projectDescription: "",
@@ -44,7 +59,7 @@ const projectsData = [
     category: "React",
   },
   {
-    id: 3,
+    id: 4,
     imageUrl: Movies,
     projectName: "Movie Database",
     projectDescription: "",
@@ -54,7 +69,7 @@ const projectsData = [
     category: "React",
   },
   {
-    id: 4,
+    id: 5,
     imageUrl: IPL,
     projectName: "IPL Dashboard",
     projectDescription: "",
@@ -64,7 +79,7 @@ const projectsData = [
     category: "React",
   },
   {
-    id: 5,
+    id: 6,
     imageUrl: UNI,
     projectName: "UNI Resto Cafe",
     projectDescription: "",
@@ -80,7 +95,7 @@ const projectsData = [
     category: "React",
   },
   {
-    id: 6,
+    id: 7,
     imageUrl: HMS,
     projectName: "Hospital Management System - Care Hospital",
     projectDescription: "",
@@ -89,7 +104,7 @@ const projectsData = [
     category: "Php",
   },
   {
-    id: 7,
+    id: 8,
     imageUrl: PG_Life,
     projectName: "PG Life",
     projectDescription: "",
@@ -100,7 +115,7 @@ const projectsData = [
     category: "Php",
   },
   {
-    id: 8,
+    id: 9,
     imageUrl: Apps,
     projectName: "App Store",
     projectDescription: "",
@@ -110,7 +125,7 @@ const projectsData = [
     category: "Basics",
   },
   {
-    id: 9,
+    id: 10,
     imageUrl: Tech,
     projectName: "Technologies App",
     projectDescription: "",
@@ -120,7 +135,7 @@ const projectsData = [
     category: "Basics",
   },
   {
-    id: 10,
+    id: 11,
     imageUrl: Sams_Griddle,
     projectName: "Sams Griddle",
     projectDescription: "",
@@ -130,7 +145,7 @@ const projectsData = [
     category: "Basics",
   },
   {
-    id: 11,
+    id: 12,
     imageUrl: Todos,
     projectName: "Todo List",
     projectDescription: "",
@@ -140,7 +155,7 @@ const projectsData = [
     category: "Basics",
   },
   {
-    id: 12,
+    id: 13,
     imageUrl: Wikki,
     projectName: "Wikkipedia Application",
     projectDescription: "",
