@@ -10,7 +10,7 @@ import Video_Streaming from "./assets/Projects/Video_Streaming.jpg";
 import Wikki from "./assets/Projects/Wikki.jpg";
 import HMS from "./assets/Projects/HMS.jpg";
 import IPL from "./assets/Projects/IPL.jpeg";
-import Notes from "./assets/Projects/Notes.png";
+import Notes from "./assets/Projects/Notes.jpg";
 
 const projectsData = [
   {
